@@ -3,28 +3,38 @@ workspace:
   type: kubernetes
   specs:
     kubernetes:
+      # disable GPUs site-wide
+      gpu-count: 
+        policy: "read"
+        value: 0
+      # disable CVMs site-wide
       container-based-vm:
         policy: "read"
         value: false
+      # allow any images
       image:
         policy: "write"
+      # default to 1 CPU
       cpu:
         policy: "write"
         value: 1
+      # all workspaces have 2 GB memory
       memory:
         policy: "read"
         value: 2
+      # all workspaces have 10 GB disk
       disk:
         policy: "read"
         value: 10
-      gpu-count:
-        value: 0
+      # workspaces have label "wac-admin-test" and the list can be appended or overridden
       labels:
         policy: append
         value:
           com.coder.custom.fromPolicy: "wac-admin-test"
+  # allow for custom configure.start
   configure:
     start:
       policy: write
+  # allow custom dev URLs
   dev-urls:
     policy: write
