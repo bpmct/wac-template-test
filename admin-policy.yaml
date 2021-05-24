@@ -6,7 +6,10 @@ workspace:
       container-based-vm:
         policy: "read"
         value: false
+      image:
+        policy: "write"
       cpu:
+        policy: "write"
         value: 1
       memory:
         policy: "read"
@@ -22,3 +25,5 @@ workspace:
   configure:
     start:
       policy: write
+  dev-urls:
+    policy: write
