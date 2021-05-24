@@ -15,7 +15,8 @@ workspace:
         policy: "read"
         value: 2
       disk:
-        value: 12
+        policy: "read"
+        value: 10
       gpu-count:
         value: 0
       labels:
