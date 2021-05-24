@@ -7,7 +7,6 @@ workspace:
         policy: "read"
         value: "true"
       cpu:
-        policy: "inherit"
         value: 1
       memory:
         policy: "read"
