@@ -5,7 +5,7 @@ workspace:
     kubernetes:
       container-based-vm:
         policy: "read"
-        value: "true"
+        value: false
       cpu:
         value: 1
       memory:
