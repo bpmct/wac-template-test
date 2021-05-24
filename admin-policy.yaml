@@ -20,4 +20,5 @@ workspace:
         value:
           com.coder.custom.fromPolicy: "wac-admin-test"
   configure:
-    policy: write
+    start:
+      policy: write
